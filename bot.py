@@ -1,5 +1,6 @@
 import pyowm
 import telebot
+import os
 
 owm = os.environ.get('OWM_TOKEN')
 bot = os.environ.get('TELEBOT_TOKEN')
