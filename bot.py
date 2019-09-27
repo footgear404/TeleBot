@@ -2,8 +2,8 @@ import pyowm
 import telebot
 import os
 
-owm = os.environ.get('OWM_TOKEN')
-bot = os.environ.get('TELEBOT_TOKEN')
+owm = pyowm.OWM('0a0a399230fb79e20714cd2cea269ff6', language = "ru")
+bot= telebot.TeleBot('640054178:AAEbilhnCSRF5OfqtEK5C_0_3TD4fqpcGiM')
 
 #Переменные
 start_mess = "Я здесь, все вижу, все слышу   ^-_-^ "
@@ -45,4 +45,5 @@ def get_text_messages(message):
 		bot.send_message(message.chat.id, "/help" + "- для всех команд")
 	elif message.text.lower() == "дай" or message.text.lower() == "бот дай стикеры":
 	    bot.send_message(message.chat.id, "Здесь будут стикеры когда Надя их сделает :)")
+
 bot.polling(none_stop=True, interval=0)
