@@ -1,1 +1,1 @@
-web: python helperBot.py --log-file -
+web: python bot.py --log-file -
